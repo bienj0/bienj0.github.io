@@ -19,7 +19,7 @@
 
         /* ===== HERO SECTION ===== */
         .hero {
-            background: linear-gradient(135deg, #FFD8A8 0%, #FFB6C1 50%, #FF9FB2 100%);
+            background: linear-gradient(135deg, #FF8C42 0%, #FF6B9D 50%, #FF4D7D 100%);
             min-height: 100vh;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -144,6 +144,11 @@
             align-items: center;
             justify-content: center;
             font-size: 3rem;
+        }
+
+        .section-title {
+                font-size: 2rem;
+                padding-bottom: 40px;
         }
 
         /* ===== FEATURES SECTION ===== */
@@ -324,6 +329,7 @@
 
             .section-title {
                 font-size: 2rem;
+                padding-bottom: 20px;
             }
 
             .mascots {
@@ -362,7 +368,7 @@
         <div class="hero-image">
             <div class="phone-frame">
                 <div class="phone-screen">
-                    <img src="assets/in-app-purchase.png" alt="Appy Birthday app screenshot" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="/assets/in-app-purchase.png" alt="Appy Birthday app screenshot" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -388,20 +394,21 @@
                 <p>Stay in the loop with timely notifications for upcoming celebrations.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3>Share & Celebrate</h3>
-                <p>Easily share birthday details with friends and family in your circles.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎂</div>
-                <h3>Gift Ideas</h3>
-                <p>Get smart suggestions for meaningful birthday gifts based on interests.</p>
+                <div class="feature-icon">
+                <img src="/assets/appy.png" alt="mascotte appy" style="width: 60%; height: 60%; object-fit: cover;">
+                </div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🌟</div>
-                <h3>Dark Mode</h3>
+                <h3>Dark Mode</h3>  
                 <p>Beautiful dark theme for comfortable viewing any time of day.</p>
             </div>
+            <div class="feature-card">
+                <div class="feature-icon">                
+                    <img src="/assets/berthie.png" alt="mascotte berthie" style="width: 60%; height: 60%; object-fit: cover;">
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -439,8 +446,8 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#terms">Terms of Service</a>
+                <a href="pages/privacy.html">Privacy Policy</a>
+                <a href="pages/tos.html">Terms of Service</a>
                 <a href="#contact">Contact</a>
                 <a href="#about">About</a>
             </div>
