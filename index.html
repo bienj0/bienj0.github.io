@@ -308,7 +308,7 @@
                 .hero {
                     grid-template-columns: 1fr;
                     min-height: auto;
-                    padding: 40px 20px;
+                    padding: 40px 20px 60px;
                     text-align: center;
                 }
 
@@ -328,8 +328,25 @@
                     order: -1;
                 }
 
+/*                .phone-frame {
+                 aspect-ratio: auto;        /* let height follow content */
+                height: auto;              /* no fixed ratio */
+                 padding: 10px;
+                }*/
+/*
+                    .phone-screen {
+        height: auto;
+    }*/
+
+        .phone-screen img {
+        display: block;
+        width: 100%;
+        height: auto;              /* key: allow full image height */
+        object-fit: contain;       /* no cropping */
+    }
+
                 .section-title {
-                    font-size: 2rem;
+                    font-size: 2rem;    
                     padding-bottom: 20px;
                 }
 
