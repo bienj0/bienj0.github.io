@@ -1,181 +1,294 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Appy Birthday</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Terms of Service - Appy Birthday</title>
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.8;
-            color: #333;
-            background: #fafafa;
-        }
+                body {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+                    max-width: 900px;
+                    margin: 0 auto;
+                    padding: 40px 20px;
+                    line-height: 1.8;
+                    color: #333;
+                    background: #fafafa;
+                }
 
-        header {
-            margin-bottom: 50px;
-            border-bottom: 3px solid #FF6B9D;
-            padding-bottom: 20px;
-        }
+                header {
+                    margin-bottom: 50px;
+                    border-bottom: 3px solid #FF6B9D;
+                    padding-bottom: 20px;
+                }
 
-        h1 {
-            color: #FF6B9D;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+                h1 {
+                    color: #FF6B9D;
+                    font-size: 2.5rem;
+                    margin-bottom: 10px;
+                }
 
-        .last-updated {
-            color: #999;
-            font-size: 0.95rem;
-        }
+                .last-updated {
+                    color: #999;
+                    font-size: 0.95rem;
+                }
 
-        h2 {
-            color: #FF6B9D;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
+                h2 {
+                    color: #FF6B9D;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    font-size: 1.5rem;
+                }
 
-        h3 {
-            color: #FF9FB2;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
+                h3 {
+                    color: #FF9FB2;
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                    font-size: 1.1rem;
+                }
 
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
+                p {
+                    margin-bottom: 15px;
+                    text-align: justify;
+                }
 
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
+                ul, ol {
+                    margin-left: 30px;
+                    margin-bottom: 15px;
+                }
 
-        li {
-            margin-bottom: 10px;
-        }
+                li {
+                    margin-bottom: 10px;
+                }
 
-        a {
-            color: #FF6B9D;
-            text-decoration: none;
-            font-weight: 500;
-        }
+                a {
+                    color: #FF6B9D;
+                    text-decoration: none;
+                    font-weight: 500;
+                }
 
-        a:hover {
-            text-decoration: underline;
-        }
+                a:hover {
+                    text-decoration: underline;
+                }
 
-        .highlight {
-            background: rgba(255, 107, 157, 0.1);
-            padding: 20px;
-            border-left: 4px solid #FF6B9D;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
+                .highlight {
+                    background: rgba(255, 107, 157, 0.1);
+                    padding: 20px;
+                    border-left: 4px solid #FF6B9D;
+                    margin: 20px 0;
+                    border-radius: 5px;
+                }
 
-        footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid #ddd;
-            text-align: center;
-            color: #999;
-        }
+                footer {
+                    margin-top: 60px;
+                    padding-top: 30px;
+                    border-top: 1px solid #ddd;
+                    text-align: center;
+                    color: #999;
+                }
 
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <a href="/" class="back-link">← Back to Home</a>
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
 
-    <header>
-        <h1>Terms of Service</h1>
-        <p class="last-updated">Last updated: December 2025</p>
-    </header>
+                .language-toggle {
+                    text-align: right;
+                    margin-bottom: 1em;
+                }
 
-    <h2>1. Agreement to Terms</h2>
-    <p>By accessing and using the Appy Birthday application (the "App"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                .language-toggle button {
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    margin-left: 8px;
+                    font: inherit;
+                    color: inherit;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
 
-    <h2>2. Use License</h2>
-    <p>Permission is granted to temporarily download one copy of the materials (information or software) on Appy Birthday's App for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
-    <ul>
-        <li>Modify or copying the materials</li>
-        <li>Using the materials for any commercial purpose or for any public display</li>
-        <li>Attempting to decompile, reverse engineering, disassemble, or otherwise discovering the source code</li>
-        <li>Transferring the materials to another person or "mirroring" the materials on any other server</li>
-        <li>Removing any copyright or other proprietary notations from the materials</li>
-        <li>Transferring the materials to any non-personal use unless express permission is given beforehand</li>
-    </ul>
+                .language-toggle button:hover {
+                    opacity: 0.7;
+                }
 
-    <h2>3. Disclaimer</h2>
-    <p>The materials on Appy Birthday's App are provided on an 'as is' basis. Appy Birthday makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+            </style>
+                <script>
+                function setLanguage(lang) {
+                    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+                    document.getElementById('nl').style.display = lang === 'nl' ? 'block' : 'none';
+                    document.documentElement.lang = lang;
+                }
+            </script>
+        </head>
+        <body>
+            <div class="language-toggle">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('nl')">Nederlands</button>
+            </div>
 
-    <h2>4. Limitations</h2>
-    <p>In no event shall Appy Birthday or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on Appy Birthday's App, even if Appy Birthday or a Appy Birthday authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+            <a href="/" class="back-link">← Back to Home</a>
 
-    <h2>5. Accuracy of Materials</h2>
-    <p>The materials appearing on Appy Birthday's App could include technical, typographical, or photographic errors. Appy Birthday does not warrant that any of the materials on the App are accurate, complete, or current. Appy Birthday may make changes to the materials contained on its App at any time without notice.</p>
+            <!-- ENGLISH -->
+    <div id="en">
 
-    <h2>6. Materials on Website</h2>
-    <p>Appy Birthday has not reviewed all of the sites linked to its App and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Appy Birthday of the site. Use of any such linked website is at the user's own risk.</p>
+            <header>
+                <h1>Terms of Service</h1>
+                <p class="last-updated">Last updated: December 2025</p>
+            </header>
 
-    <h2>7. Modifications</h2>
-    <p>Appy Birthday may revise these terms of service for the App at any time without notice. By using this App, you are agreeing to be bound by the then current version of these terms of service.</p>
+            <p>
+        These Terms of Service (“Terms”) govern your use of the AppyBirthday mobile application (“the App”).
+        By using the App, you agree to these Terms.
+        </p>
 
-    <h2>8. Governing Law</h2>
-    <p>These terms and conditions are governed by and construed in accordance with the laws of the Netherlands, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+        <h2>1. Use of the App</h2>
+        <p>
+        AppyBirthday is provided for personal, non-commercial use.
+        You agree to use the App in a lawful manner and in accordance with these Terms.
+        </p>
 
-    <h2>9. User Accounts</h2>
-    <p>If you create an account on the Appy Birthday App, you are responsible for maintaining the confidentiality of your account information and password. You agree to accept responsibility for all activities that occur under your account. You must notify us immediately of any unauthorized uses of your account.</p>
+        <h2>2. User Content</h2>
+        <p>
+        All information entered into the App, including names, dates, notes, and generated messages, is stored locally on your device.
+        You remain fully responsible for any content you enter or generate using the App.
+        </p>
 
-    <h2>10. User Content</h2>
-    <p>You retain all rights to any content you submit, post or display on or through the App (collectively, "User Content"). By submitting User Content to the App, you grant Appy Birthday a non-exclusive, royalty-free, perpetual, and irrevocable license to use, reproduce, modify, perform, display, distribute and sublicense such User Content.</p>
+        <h2>3. AI-Generated Content</h2>
+        <p>
+        The App may generate birthday messages using AI-based technology.
+        Generated content is provided for convenience and inspiration only.
+        AppyBirthday does not guarantee accuracy, appropriateness, or suitability of generated content.
+        </p>
 
-    <h2>11. Prohibited Conduct</h2>
-    <p>You agree not to:</p>
-    <ul>
-        <li>Violate any applicable laws or regulations</li>
-        <li>Infringe on any intellectual property rights</li>
-        <li>Harass or cause harm to other users</li>
-        <li>Transmit viruses or malicious code</li>
-        <li>Spam or send unsolicited communications</li>
-        <li>Attempt to gain unauthorized access to the App</li>
-    </ul>
+        <h2>4. Notifications</h2>
+        <p>
+        AppyBirthday allows you to enable local notifications for birthday reminders.
+        You can manage or disable notifications at any time via your device settings.
+        </p>
 
-    <h2>12. Termination</h2>
-    <p>Appy Birthday may terminate or suspend your account and access to the App immediately, without prior notice or liability, for any reason whatsoever, including if you breach the Terms of Service.</p>
+        <h2>5. Availability</h2>
+        <p>
+        The App is provided “as is” and “as available”.
+        We do not guarantee that the App will always be available or error-free.
+        Features may be modified or discontinued at any time.
+        </p>
 
-    <h2>13. Limitation of Liability</h2>
-    <div class="highlight">
-        <p><strong>To the fullest extent allowed by law, Appy Birthday shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, even if Appy Birthday has been advised of the possibility of such damages.</strong></p>
-    </div>
+        <h2>6. Limitation of Liability</h2>
+        <p>
+        To the maximum extent permitted by law, AppyBirthday shall not be liable for any damages arising from your use of, or inability to use, the App.
+        </p>
 
-    <h2>14. Indemnification</h2>
-    <p>You agree to indemnify and hold harmless Appy Birthday and its officers, directors, employees, and agents from any and all claims, damages, losses, or costs arising out of or relating to your use of the App or any violation of these Terms of Service.</p>
+        <h2>7. Intellectual Property</h2>
+        <p>
+        All rights, title, and interest in the App, including design and code, remain with the developer.
+        You may not copy, modify, or distribute the App except as permitted by law.
+        </p>
 
-    <h2>15. Contact Information</h2>
-    <p>If you have any questions about these Terms of Service, please contact us at:</p>
-    <p>
-        Email: <a href="mailto:support@appybirthday.com">support@appybirthday.com</a><br>
-        Website: <a href="/">Appy Birthday</a>
-    </p>
+        <h2>8. Changes to These Terms</h2>
+        <p>
+        These Terms may be updated from time to time.
+        Changes will be effective upon updating the “Last updated” date above.
+        </p>
 
-    <footer>
-        <p>&copy; 2025 Appy Birthday. All rights reserved.</p>
-        <p><a href="/">← Back to Home</a> | <a href="privacy.html">Privacy Policy</a></p>
-    </footer>
-</body>
-</html>
+        <h2>9. Governing Law</h2>
+        <p>
+        These Terms are governed by the laws of the Netherlands.
+        </p>
+
+        <h2>10. Contact</h2>
+        <p>
+        Developer: Robin van ’t Slot<br>
+        App: AppyBirthday<br>
+        Email: [your contact email]
+        </p>
+
+        </div>
+
+        <!-- DUTCH -->
+        <div id="nl" style="display:none;">
+
+        <header>
+                <h1>Gebruiksvoorwaarden</h1>
+                <p class="last-updated">Voor het laatst bijgewerkt: December 2025</p>
+        </header>
+
+        <p>
+        Deze gebruiksvoorwaarden (“Voorwaarden”) zijn van toepassing op het gebruik van de mobiele applicatie AppyBirthday (“de App”).
+        Door de App te gebruiken, ga je akkoord met deze Voorwaarden.
+        </p>
+
+        <h2>1. Gebruik van de App</h2>
+        <p>
+        AppyBirthday wordt aangeboden voor persoonlijk, niet-commercieel gebruik.
+        Je stemt ermee in de App op een rechtmatige manier en in overeenstemming met deze Voorwaarden te gebruiken.
+        </p>
+
+        <h2>2. Gebruikersinhoud</h2>
+        <p>
+        Alle gegevens die je in de App invoert, waaronder namen, data, notities en gegenereerde berichten, worden lokaal op je apparaat opgeslagen.
+        Je blijft volledig verantwoordelijk voor de inhoud die je invoert of genereert via de App.
+        </p>
+
+        <h2>3. AI-gegenereerde inhoud</h2>
+        <p>
+        De App kan verjaardagsberichten genereren met behulp van AI-technologie.
+        Deze inhoud wordt uitsluitend aangeboden ter inspiratie en gemak.
+        AppyBirthday geeft geen garanties met betrekking tot de juistheid, geschiktheid of toepasselijkheid van de gegenereerde inhoud.
+        </p>
+
+        <h2>4. Meldingen</h2>
+        <p>
+        AppyBirthday biedt de mogelijkheid om lokale meldingen in te schakelen voor verjaardagsherinneringen.
+        Je kunt meldingen op elk moment beheren of uitschakelen via de instellingen van je apparaat.
+        </p>
+
+        <h2>5. Beschikbaarheid</h2>
+        <p>
+        De App wordt geleverd “zoals deze is” en “zoals beschikbaar”.
+        Er wordt geen garantie gegeven dat de App altijd beschikbaar of foutloos zal zijn.
+        Functionaliteit kan op elk moment worden aangepast of beëindigd.
+        </p>
+
+        <h2>6. Aansprakelijkheidsbeperking</h2>
+        <p>
+        Voor zover wettelijk toegestaan, is AppyBirthday niet aansprakelijk voor schade die voortvloeit uit het gebruik van, of het niet kunnen gebruiken van, de App.
+        </p>
+
+        <h2>7. Intellectueel eigendom</h2>
+        <p>
+        Alle rechten met betrekking tot de App, inclusief ontwerp en broncode, blijven eigendom van de ontwikkelaar.
+        Het is niet toegestaan de App te kopiëren, wijzigen of verspreiden, behalve voor zover wettelijk toegestaan.
+        </p>
+
+        <h2>8. Wijzigingen in deze voorwaarden</h2>
+        <p>
+        Deze Voorwaarden kunnen van tijd tot tijd worden aangepast.
+        Wijzigingen worden van kracht door het bijwerken van de datum “Laatst bijgewerkt” hierboven.
+        </p>
+
+        <h2>9. Toepasselijk recht</h2>
+        <p>
+        Op deze Voorwaarden is Nederlands recht van toepassing.
+        </p>
+
+        <h2>10. Contact</h2>
+        <p>
+        Ontwikkelaar: Robin van ’t Slot<br>
+        App: AppyBirthday<br>
+        E-mail: [jouw contact e-mailadres]
+        </p>
+
+        </div>
+
+            <footer>
+                <p>&copy; 2025 Appy Birthday. All rights reserved.</p>
+                <p><a href="/">← Back to Home</a> | <a href="privacy.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
