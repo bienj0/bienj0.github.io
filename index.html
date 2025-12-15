@@ -131,7 +131,8 @@
                 max-width: 350px;
                 min-width: 0; 
                 aspect-ratio: 9 / 19.5;
-                background: linear-gradient(135deg, #FF9FB2 0%, #FFB6C1 100%);
+                background: #1a1a1a; /* Fallback */
+                background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
                 border-radius: 50px;
                 padding: 14px;
                 box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
@@ -259,22 +260,34 @@
 
             .gallery-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-flow: column;
+                grid-auto-columns: minmax(250px, 1fr);
                 gap: 20px;
+                padding-bottom: 20px;
+                overflow-x: auto;
+                scroll-behavior: smooth;
                 max-width: 1200px;
                 margin: 0 auto;
+                 scroll-snap-type: x mandatory;
             }
 
             .gallery-item {
-                aspect-ratio: 9 / 16;
+                scroll-snap-align: start;
+                aspect-ratio: 9 / 19.5;
                 background: linear-gradient(135deg, #FFD8A8 0%, #FFB6C1 100%);
-                border-radius: 20px;
+                padding: 12px;
+                border-radius: 46px;
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 3rem;
+                flex-direction: column;
+                box-sizing: border-box;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                align-items: center;
                 overflow: hidden;
+            }
+            .gallery-item .phone-screen img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
             /* ===== FOOTER SECTION ===== */
@@ -370,8 +383,8 @@
         <!-- HERO SECTION -->
         <section class="hero">
             <div class="hero-content">
-                <h1>Say the right thing.</h1>
-                <p>Mis nooit meer een verjaardag en verstuur originele felicitaties. Vier het leven met Appy Birthday.</p>
+                <h1>Meer dan "Gefeliciteerd!"</h1>
+                <p>Persoonlijke felicitaties, altijd op tijd.</p>
                 <div class="cta-buttons">
                     <button class="btn btn-primary">Coming soon</button>
                     <!-- <button class="btn btn-secondary">Learn More</button> -->
@@ -380,7 +393,7 @@
             <div class="hero-image">
                 <div class="phone-frame">
                     <div class="phone-screen">
-                        <img src="/assets/in-app-purchase.png" alt="Appy Birthday app screenshot" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="/assets/appybirthday-home.png" alt="Appy Birthday app screenshot" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -429,15 +442,15 @@
             <div class="usp-grid">
                 <div class="usp-card">
                     <h3>Apple Intelligence</h3>
-                    <p>AppyBirthday uses Apple Intelligence for it's smart features. </p>
+                    <p>Apple Intelligence helpt je bij het schrijven van originele felicitaties.</p>
                 </div>
                 <div class="usp-card">
-                    <h3>Your Privacy First</h3>
-                    <p>Your data is encrypted and never shared with third parties.</p>
+                    <h3>Jouw privacy voorop</h3>
+                    <p>Je gegevens blijven veilig op je eigen apparaat.</p>
                 </div>
                 <div class="usp-card">  
-                    <h3>Works Offline</h3>
-                    <p>Access your birthday list anytime, even without internet connection.</p>
+                    <h3>Werkt offline</h3>
+                    <p>Altijd toegang tot je verjaardagen, ook zonder internet.</p>
                 </div>
             </div>
         </section>
@@ -446,10 +459,10 @@
         <section class="gallery">
             <h2 class="section-title">Experience the App</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">🎉</div>
-                <div class="gallery-item">🎁</div>
-                <div class="gallery-item">🎂</div>
-                <div class="gallery-item">🎈</div>
+                <div class="gallery-item"> <div class="phone-screen"><img src="/assets/appybirthday-deelbericht.png" alt="Appy Birthday app screenshot" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+                <div class="gallery-item"><div class="phone-screen"><img src="/assets/appybirthday-notificatie.png" alt="Appy Birthday app screenshot" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+                <div class="gallery-item"><div class="phone-screen"><img src="/assets/appybirthday-voegverjaardagtoe.png" alt="Appy Birthday app screenshot" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+                <div class="gallery-item"> <div class="phone-screen"><img src="/assets/appybirthday-darkmode.png" alt="Appy Birthday app screenshot" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
             </div>
         </section>
 
