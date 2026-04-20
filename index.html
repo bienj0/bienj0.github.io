@@ -480,7 +480,8 @@
         </footer>
 
         <script>
-    const isAppyBirthday = window.location.hostname.includes('appybirthday.nl');
+    const userLang = navigator.language || navigator.userLanguage;
+    const isAppyBirthday = userLang.startsWith('nl');
 
     const content = {
         appybirthday: {
@@ -536,8 +537,8 @@
     const active = isAppyBirthday ? content.appybirthday : content.birthdaybuddy;
 
     document.title = isAppyBirthday
-        ? 'AppyBirthday - Persoonlijke felicitaties altijd op tijd.'
-        : 'Birthday Buddy - Never miss a birthday again.';
+        ? 'AppyBirthday - Unieke felicitaties altijd op tijd.'
+        : 'Birthday Buddy - Unique birthday wishes, always on time.';
 
     document.querySelectorAll('[data-content]').forEach(el => {
         const key = el.dataset.content;
