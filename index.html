@@ -1,514 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Never forget a birthday again. Track birthdays, gifts and celebrations with Birthday Buddy.">
-    <link rel="canonical" href="https://birthdaybuddy.nl/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Birthday Buddy - Track birthdays,  gifts & celebrate in style">
-    <meta property="og:description" content="Never forget a birthday again. Track birthdays, gifts and celebrations with Birthday Buddy.">
-    <meta property="og:url" content="https://birthdaybuddy.nl/">
-    <meta property="og:image" content="https://birthdaybuddy.nl/assets/birthdaybuddy-home.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Birthday Buddy - Track birthdays,  gifts & celebrate in style">
-    <meta name="twitter:description" content="Never forget a birthday again. Track birthdays, gifts and celebrations with Birthday Buddy.">
-    <meta name="twitter:image" content="https://birthdaybuddy.nl/assets/birthdaybuddy-home.png">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Birthday Buddy",
-      "operatingSystem": "iOS",
-      "installUrl": "https://apps.apple.com/app/appybirthday/id6753673100",
-      "screenshot": "https://birthdaybuddy.nl/assets/birthdaybuddy-home.png",
-	  "offers": {
-		"@type": "Offer",
-		"price": 0,
-		"priceCurrency": "EUR"
-		}
-    }
-    </script>
-    <meta name="apple-itunes-app" content="app-id=6753673100">
-    <title>Birthday Buddy - Track birthdays,  gifts & celebrate in style</title>
-    <link rel="icon" type="image/png" href="/assets/appy.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            background: #fafafa;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            background: linear-gradient(135deg, #FF8C42 0%, #FF6B9D 50%, #FF4D7D 100%);
-            min-height: 100vh;
-            min-height: -webkit-fill-available;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            padding: 60px 40px;
-            gap: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 400px;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 500px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            color: white;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 32px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #FF6B9D;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .hero-image {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-width: 0;
-            width: 100%;
-        }
-
-        .phone-frame {
-            width: 100%;
-            max-width: 350px;
-            min-width: 0;
-            aspect-ratio: 9 / 19.5;
-            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
-            border-radius: 50px;
-            padding: 14px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-        }
-
-        .phone-screen {
-            flex: 1;
-            width: 100%;
-            border-radius: 42px;
-            overflow: hidden;
-            position: relative;
-            -webkit-mask-image: -webkit-radial-gradient(white, black);
-        }
-
-        .section-title {
-            font-size: 2rem;
-            padding-bottom: 40px;
-        }
-
-        /* ===== FEATURES SECTION ===== */
-        .features {
-            padding: 100px 40px;
-            background: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, #F5F5F5 0%, #FAFAFA 100%);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #eee;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.1);
-            border-color: #FFB6C1;
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 15px;
-        }
-
-        .feature-card p {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* ===== USP SECTION ===== */
-        .usp-section {
-            background: linear-gradient(135deg, #00CED1 0%, #00B8D4 50%, #00A5DD 100%);
-            padding: 100px 40px;
-            color: white;
-            text-align: center;
-        }
-
-        .usp-section h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 40px;
-        }
-
-        .usp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .usp-card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .usp-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .usp-card p {
-            font-size: 0.95rem;
-            opacity: 0.95;
-        }
-
-        /* ===== GALLERY SECTION ===== */
-        .gallery {
-            padding: 100px 40px;
-            background: white;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-auto-flow: column;
-            grid-auto-columns: minmax(250px, 1fr);
-            gap: 20px;
-            padding-bottom: 20px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            max-width: 1200px;
-            margin: 0 auto;
-            scroll-snap-type: x mandatory;
-        }
-
-        .gallery-item {
-            scroll-snap-align: start;
-            aspect-ratio: 9 / 19.5;
-            background: linear-gradient(135deg, #FFD8A8 0%, #FFB6C1 100%);
-            padding: 12px;
-            border-radius: 46px;
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            align-items: center;
-            overflow: hidden;
-        }
-        .gallery-item .phone-screen img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* ===== FOOTER SECTION ===== */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #FFB6C1;
-        }
-
-        .footer-text {
-            color: #999;
-            font-size: 0.9rem;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                min-height: auto;
-                padding: 40px 20px 60px;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .cta-buttons {
-                justify-content: center;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .section-title {
-                font-size: 2rem;
-                padding-bottom: 20px;
-            }
-
-            .features {
-                padding: 60px 20px;
-            }
-
-            .usp-section {
-                padding: 60px 20px;
-            }
-
-            .gallery {
-                padding: 60px 20px;
-            }
-
-            footer {
-                padding: 40px 20px;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appy Birthday – Birthday reminders, gift ideas &amp; cards</title>
+<meta name="description" content="New in Appy Birthday 4: a fresh look, iPad, widgets and gift pinning from any website. Other apps remind you of birthdays. We help you show up for them.">
+<link rel="canonical" href="https://appybirthday.nl/">
+<link rel="alternate" hreflang="en" href="https://appybirthday.nl/">
+<link rel="alternate" hreflang="nl" href="https://appybirthday.nl/nl/">
+<link rel="alternate" hreflang="fr" href="https://appybirthday.nl/fr/">
+<link rel="alternate" hreflang="de" href="https://appybirthday.nl/de/">
+<link rel="alternate" hreflang="it" href="https://appybirthday.nl/it/">
+<link rel="alternate" hreflang="es" href="https://appybirthday.nl/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://appybirthday.nl/pt/">
+<link rel="alternate" hreflang="ja" href="https://appybirthday.nl/ja/">
+<link rel="alternate" hreflang="ko" href="https://appybirthday.nl/ko/">
+<link rel="alternate" hreflang="x-default" href="https://appybirthday.nl/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Appy Birthday">
+<meta property="og:title" content="Appy Birthday – Birthday reminders, gift ideas &amp; cards">
+<meta property="og:description" content="New in Appy Birthday 4: a fresh look, iPad, widgets and gift pinning from any website. Other apps remind you of birthdays. We help you show up for them.">
+<meta property="og:url" content="https://appybirthday.nl/">
+<meta property="og:image" content="https://appybirthday.nl/assets/site/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/site/favicon.png">
+<link rel="apple-touch-icon" href="assets/site/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site/site.css">
+<script>
+(function(){
+  try{
+    if(localStorage.getItem('ab_lang'))return;
+    var ok=['nl','fr','de','it','es','pt','ja','ko'];
+    var prefs=navigator.languages||[navigator.language||''];
+    for(var i=0;i<prefs.length;i++){var l=(prefs[i]||'').toLowerCase().slice(0,2);
+      if(l==='en')return; if(ok.indexOf(l)>-1){location.replace(l+'/');return;}}
+  }catch(e){}
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Appy Birthday", "operatingSystem": "iOS, iPadOS", "applicationCategory": "LifestyleApplication", "image": "https://appybirthday.nl/assets/site/icon.png", "inLanguage": "en", "offers": {"@type": "Offer", "price": 0, "priceCurrency": "EUR"}}</script>
 </head>
-<body>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Don't be the 5th "Congrats 🎉"</h1>
-            <p>Track birthdays,  gifts & celebrate in style.</p>
-            <div class="cta-buttons">
-                <a href="https://apps.apple.com/app/appybirthday/id6753673100" target="_blank" class="btn btn-primary">Available now</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="phone-frame">
-                <div class="phone-screen">
-                    <img src="/assets/birthdaybuddy-home.png" alt="App screenshot" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURES SECTION -->
-    <section class="features">
-        <h2 class="section-title">Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon" aria-hidden="true">📅</div>
-                <h3>Smart Reminders</h3>
-                <p>Never forget: get reminders one day, one week or two weeks in advance.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="/assets/appy.png" alt="Appy mascot" style="width: 60%; height: 60%; object-fit: cover;" loading="lazy">
-                </div>
-                <h3>Meet Appy</h3>
-                <p>Your friendly reminder buddy, keeping every birthday on your radar.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon" aria-hidden="true">🎈</div>
-                <h3>Your Birthday Assistant</h3>
-                <p>Create birthday cards with a personal touch, keep track of gift ideas, invitations and more.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="/assets/berthie.png" alt="Berthie mascot" style="width: 60%; height: 60%; object-fit: cover;" loading="lazy">
-                </div>
-                <h3>Meet Berthie</h3>
-                <p>Helping you to keep track of all of birthdays, gifts, wishlists and more.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon" aria-hidden="true">🌟</div>
-                <h3>Import Birthdays</h3>
-                <p>Add birthdays conveniently from contacts already on your phone.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon" style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                    <a href="https://apps.apple.com/app/appybirthday/id6753673100" style="width: 100%; height: 100%; display: block;">
-                        <img src="/assets/appstore-badge.svg" alt="Download on the App Store" style="width: 100%; height: 100%; object-fit: fill;" loading="lazy">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- USP SECTION -->
-    <section class="usp-section">
-        <h2>Why Birthday Buddy?</h2>
-        <div class="usp-grid">
-            <div class="usp-card">
-                <h3>Image Playground</h3>
-                <p>Apple Intelligence helps you create original, heartfelt birthday cards.</p>
-            </div>
-            <div class="usp-card">
-                <h3>Your Privacy First</h3>
-                <p>Your data stays safe on your own device.</p>
-            </div>
-            <div class="usp-card">
-                <h3>Works Offline</h3>
-                <p>Always access your birthdays, even without internet.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALLERY SECTION -->
-    <section class="gallery">
-        <h2 class="section-title">Experience the App</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <div class="phone-screen"><img src="/assets/birthdaybuddy-notification.png" alt="Birthday Buddy notification screenshot" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-            </div>
-            <div class="gallery-item">
-                <div class="phone-screen"><img src="/assets/birthdaybuddy-details.png" alt="Birthday Buddy details screenshot" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-            </div>
-            <div class="gallery-item">
-                <div class="phone-screen"><img src="/assets/birthdaybuddy-birthdayboard.png" alt="Birthday Buddy search screenshot" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-            </div>
-            <div class="gallery-item">
-                <div class="phone-screen"><img src="/assets/birthdaybuddy-listview.png" alt="Birthday Buddy list view screenshot" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="pages/privacy.html">Privacy Policy</a>
-                <a href="pages/tos.html">Terms of Service</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-            </div>
-            <p class="footer-text">&copy; <span id="year">2026</span> Birthday Buddy. Made with ❤️ in the Netherlands.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+<body class="l-en">
+<header class="top"><a class="brand" href=""><img src="assets/site/icon.png" alt="" width="40" height="40"><span>Appy Birthday</span></a><span class="pill">Coming soon</span><span class="grow"></span><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>English</summary><div class="menu"><a href="" lang="en" data-lang="en" aria-current="page">English</a><a href="nl/" lang="nl" data-lang="nl">Nederlands</a><a href="fr/" lang="fr" data-lang="fr">Français</a><a href="de/" lang="de" data-lang="de">Deutsch</a><a href="it/" lang="it" data-lang="it">Italiano</a><a href="es/" lang="es" data-lang="es">Español</a><a href="pt/" lang="pt-BR" data-lang="pt">Português</a><a href="ja/" lang="ja" data-lang="ja">日本語</a><a href="ko/" lang="ko" data-lang="ko">한국어</a></div></details></header>
+<main>
+<section class="hero"><i class="cf" style="left:55%;top:8%;background:#A6DBBE;width:14px;height:14px;transform:rotate(0deg)"></i><i class="cf" style="left:95%;top:9%;background:#F5E197;width:38px;height:12px;transform:rotate(-30deg)"></i><i class="cf" style="left:93%;top:52%;background:#F4B3CE;width:12px;height:12px;transform:rotate(0deg)"></i><i class="cf" style="left:54%;top:70%;background:#B8A5F2;width:34px;height:11px;transform:rotate(20deg)"></i><i class="cf" style="left:1%;top:92%;background:#F6C6A6;width:12px;height:12px;transform:rotate(0deg)"></i><i class="cf" style="left:88%;top:90%;background:#A8CFF4;width:30px;height:10px;transform:rotate(35deg)"></i>
+  <div class="htext">
+    <p class="kicker">Other apps remind you of birthdays. Appy Birthday helps you show up.</p>
+    <h1>Don&#x27;t just remember.<br><span class="a">Show up.</span></h1>
+    <p class="lead">Get a heads-up while there&#x27;s still time to do something about it, keep every gift idea in one place, and send a card nobody else could have made. No account. No ads. No data collected.</p>
+    <span class="soon-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.4 6.1 6.6.4-5.1 4.2 1.7 6.4L12 16l-5.6 3.6 1.7-6.4L3 9l6.6-.4z"/></svg>Coming soon to the App Store</span>
+  </div>
+  <figure class="hvis"><img src="assets/site/en/01_home.webp" alt="Appy Birthday screenshot" width="720" fetchpriority="high"></figure>
+</section>
+<section class="feat"><div class="ftext"><h2>Pin the perfect gift <span class="a">for every friend</span></h2><p class="lead">Gift ideas, wishlists and invites</p><p>Every gift idea, wishlist and invitation for everyone, neatly in one place.</p></div><figure class="fvis"><img src="assets/site/en/02_detail.webp" alt="Appy Birthday screenshot" loading="lazy" width="720"></figure></section><section class="feat rev"><div class="ftext"><h2>A card only <span class="a">they could get</span></h2><p class="lead">Made from what Emma loves</p><p>Create a one-of-a-kind birthday card based on what they love, made with Apple&#x27;s Image Playground. Share it in a few taps.</p></div><figure class="fvis"><img src="assets/site/en/03_card.webp" alt="Appy Birthday screenshot" loading="lazy" width="720"></figure></section><section class="feat"><div class="ftext"><h2>Pin gifts from <span class="a">any website</span></h2><p class="lead">And import every birthday from Contacts</p><p>Spotted the perfect gift online? Tap Share, choose Appy Birthday, and it lands straight on their Birthday Board. Works for wishlists and invitations too.</p><p>Import them from Contacts or add them one by one, with or without the year.</p></div><figure class="fvis"><img src="assets/site/en/06_share_import.webp" alt="Appy Birthday screenshot" loading="lazy" width="720"></figure></section><section class="feat rev"><div class="ftext"><h2>Who&#x27;s next, <span class="a">at a glance</span></h2><p class="lead">Make a card or message right from your Home Screen</p><p>See who&#x27;s next at a glance. Make a card or message right from your Home Screen, without opening the app.</p></div><figure class="fvis"><img src="assets/site/en/07_widgets.webp" alt="Appy Birthday screenshot" loading="lazy" width="720"></figure></section><section class="feat"><div class="ftext"><h2>Reminded while <span class="a">there&#x27;s still time</span></h2><p class="lead">Pick the perfect timing for every person</p><p>Choose per person when you get a heads-up: a week ahead for Mom&#x27;s gift, the morning of for a coworker.</p></div><figure class="fvis"><img src="assets/site/en/05_reminder.webp" alt="Appy Birthday screenshot" loading="lazy" width="720"></figure></section><section class="feat rev"><div class="ftext"><h2>Make it <span class="a">yours</span></h2><p class="lead">Themes, backgrounds and app icons</p><p>Choose from themes, backgrounds and app icons.</p></div><figure class="fvis"><img src="assets/site/en/07_themes.webp" alt="Appy Birthday screenshot" loading="lazy" width="720"></figure></section><section class="feat"><div class="ftext"><h2>Private <span class="a">by design</span></h2><p class="lead">Your friends&#x27; birthdays stay yours</p><p>We collect nothing. Premium backups stay in your own private iCloud.</p><ul class='checks'><li><strong>No account needed</strong><span>Just open the app and start</span></li><li><strong>We collect no data</strong><span>No tracking, no analytics</span></li><li><strong>Your own iCloud</strong><span>Premium backups stay in your private iCloud</span></li></ul></div><figure class="fvis"><img src="assets/site/en/08_privacy.webp" alt="Appy Birthday screenshot" loading="lazy" width="720"></figure></section><section class="feat rev"><div class="ftext"><h2>Now also <span class="a">on iPad</span></h2><p class="lead">Plan every birthday on the big screen</p></div><figure class="fvis"><img src="assets/site/en/09_ipad.webp" alt="Appy Birthday on iPad" loading="lazy" width="720"></figure></section>
+<section class="free"><h2>Free &amp; Premium</h2><p>Reminders, the Birthday Board, cards and one widget are free. Premium (yearly or one-time) adds contact import, all widgets, iCloud backup, and extra themes and app icons.</p></section>
+<section class="band"><i class="cf" style="left:55%;top:8%;background:#A6DBBE;width:14px;height:14px;transform:rotate(0deg)"></i><i class="cf" style="left:95%;top:9%;background:#F5E197;width:38px;height:12px;transform:rotate(-30deg)"></i><i class="cf" style="left:93%;top:52%;background:#F4B3CE;width:12px;height:12px;transform:rotate(0deg)"></i><i class="cf" style="left:54%;top:70%;background:#B8A5F2;width:34px;height:11px;transform:rotate(20deg)"></i><i class="cf" style="left:1%;top:92%;background:#F6C6A6;width:12px;height:12px;transform:rotate(0deg)"></i><i class="cf" style="left:88%;top:90%;background:#A8CFF4;width:30px;height:10px;transform:rotate(35deg)"></i><img src="assets/site/icon.png" alt="" width="120" height="120">
+  <h2>Appy Birthday 4 is almost here</h2><p>The all-new version for iPhone and iPad lands on the App Store soon.</p><span class="soon-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.4 6.1 6.6.4-5.1 4.2 1.7 6.4L12 16l-5.6 3.6 1.7-6.4L3 9l6.6-.4z"/></svg>Coming soon to the App Store</span></section>
+</main>
+<footer><nav class="flinks"><a href="pages/privacy.html">Privacy Policy</a><a href="pages/tos.html">Terms of Use</a><a href="press/">Press kit</a><a href="mailto:hello@appybirthday.nl">Contact</a></nav><p class="fmail"><a href="mailto:hello@appybirthday.nl">hello@appybirthday.nl</a></p><p class="flangs"><a href="" data-lang="en">English</a> · <a href="nl/" data-lang="nl">Nederlands</a> · <a href="fr/" data-lang="fr">Français</a> · <a href="de/" data-lang="de">Deutsch</a> · <a href="it/" data-lang="it">Italiano</a> · <a href="es/" data-lang="es">Español</a> · <a href="pt/" data-lang="pt">Português</a> · <a href="ja/" data-lang="ja">日本語</a> · <a href="ko/" data-lang="ko">한국어</a></p><p class="copy">© <span class="yr">2026</span> Appy Birthday · Made with ❤️ in the Netherlands</p></footer>
+<script>
+(function(){
+  var y=document.querySelectorAll('.yr');for(var i=0;i<y.length;i++){y[i].textContent=new Date().getFullYear();}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-lang]');
+    if(a){try{localStorage.setItem('ab_lang',a.getAttribute('data-lang'));}catch(_){}}});
+})();
+</script>
 </body>
 </html>
