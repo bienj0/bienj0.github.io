@@ -64,6 +64,8 @@ h1, h2 { letter-spacing: -.025em; line-height: 1.1; font-weight: 700; text-wrap:
   box-shadow: 0 14px 34px rgba(82, 81, 202, .35), inset 0 2px 0 rgba(255, 255, 255, .3);
 }
 .soon-btn svg { width: 20px; height: 20px; fill: #fff; }
+a.soon-btn { text-decoration: none; }
+a.soon-btn:hover { filter: brightness(1.08); }
 .store img { height: 56px; width: auto; }
 
 /* ---------- hero ---------- */
